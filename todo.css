@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+	font-family: 'Fredoka One', cursive;
+	background: linear-gradient(to bottom right, #0D324D, #7F5A83);
+}
+
+.container{
+	position: relative;
+	padding: 10px;
+	margin: 50px auto;
+	max-width: 800px;
+}
+
+.addTask{
+	width: 100%;
+	display: flex;
+	padding: 10px 0;
+	font-family: 'Fredoka One', cursive;
+}
+
+.addTask > input[type="text"]{
+	width: 90%;
+	color: #0e0e0e;
+	font-family: 'Fredoka One', cursive;
+	background: none;
+	padding: 10px;
+	font-size: 22px;
+	border:none;
+	border-bottom: 2px solid #0e0d0d;
+	outline: none;
+}
+
+.addTask button{
+	margin: 0 10px;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background: #222;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Fredoka One', cursive;
+	text-transform: uppercase;
+	padding: 10px;
+	border: none;
+
+}
+
+.Pending, .Completed{
+	padding: 20px;
+	margin: 5px 0;
+}
+
+h3{
+	font-size: 28px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+}
+
+ol{
+	list-style: none;
+	counter-reset: my-counter;
+}
+
+ol li{
+	width: 100%;
+	font-size: 22px;
+	padding: 18px;
+	margin: 5px 0;
+	background: #c50909c3;
+	counter-increment: my-counter;
+}
+
+ol.Completed li{
+	background: #10651d;
+}
+
+ol li::before{
+	content: counter(my-counter);
+	background: #070707;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 2rem;
+	text-align: center;
+	color: #fff;
+	margin-right: 0.5rem;
+}
+
+li button{
+	font-size: 28px;
+	line-height: 28px;
+	background: none;
+	margin-right: 15px;
+	border: none;
+	outline: none;
+	float: right;
+	padding: 5px;
+	cursor: pointer;
+}
